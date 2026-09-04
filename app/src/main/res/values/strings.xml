@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Quiz das Bandeiras</string>
+    <string name="app_inicio">Início</string>
+    <string name="botao_iniciar">INICIAR QUIZ</string>
+    <string name="botao_sair">SAIR</string>
+    <string name="pais_este">Que país é este?</string>
+    <string name="ranking">Resultados</string>
+</resources>
