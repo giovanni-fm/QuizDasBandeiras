@@ -9,7 +9,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "br.edu.fatecgru"
+        applicationId = "br.edu.quizbandeira"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
