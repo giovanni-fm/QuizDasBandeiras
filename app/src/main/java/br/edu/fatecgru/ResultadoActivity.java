@@ -40,11 +40,12 @@ public class ResultadoActivity extends AppCompatActivity {
         nome = getIntent().getStringExtra("nomeUsuario");
 
         tvPontosFinais.setText(String.valueOf(acertos));
-        tvNomeRank.setText(String.valueOf(nome));
+        tvNomeRank.setText(nome);
     }
 
     public void reiniciar(View v) {
         Intent it = new Intent(this, QuizActivity.class);
+        it.putExtra("nomeUsuario", nome);
         startActivity(it);
         finish();
     }

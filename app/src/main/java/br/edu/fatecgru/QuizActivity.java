@@ -25,6 +25,7 @@ public class QuizActivity extends AppCompatActivity {
     ImageView imgBandeira;
     Button btnConfirma;
 
+    String nomeUsuario;
     int indiceAtual = 0;
     int pontos = 0;
     List<Pergunta> listaDePerguntas = new ArrayList<>(); //lista onde contem TODAS as perguntas e respostas
@@ -87,6 +88,8 @@ public class QuizActivity extends AppCompatActivity {
         rdbOpcao4.setText(p.getOpcoes()[3]);
 
         rdgOpcoes.clearCheck(); //limpa os botões
+
+        nomeUsuario = getIntent().getStringExtra("nomeUsuario");
     }
 
     public void confimar(View v) {
@@ -112,8 +115,7 @@ public class QuizActivity extends AppCompatActivity {
         } else { //caso for maior = vai pra tela de RESULTADOS
             Intent it = new Intent(QuizActivity.this, ResultadoActivity.class);
             it.putExtra("pontos", pontos); //vai passar os pontos pra proxima tela
-            String usuario = getIntent().getStringExtra("nomeUsuario"); //vai pegar o nome do usuario e converte pra String
-            it.putExtra("nomeUsuario", usuario); //passa pra tela de Resultados
+            it.putExtra("nomeUsuario", nomeUsuario); //passa pra tela de Resultados
             startActivity(it);
             finish(); //finaliza SOMENTE a tela do Quiz, indo pra tela de RESULTADOS
         }
